@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "HAKR - 实时网页编辑器"
+  },
+  "extDesc": {
+    "message": "点击网页上的任何文字或图片即可在本地修改。所有更改仅在本地生效,刷新页面后恢复。"
+  },
+  "tagline": {
+    "message": "实时网页编辑器"
+  },
+  "rowPage": {
+    "message": "页面"
+  },
+  "rowStatus": {
+    "message": "状态"
+  },
+  "rowEdits": {
+    "message": "已编辑"
+  },
+  "statusActive": {
+    "message": "已激活"
+  },
+  "statusInactive": {
+    "message": "未激活"
+  },
+  "statusRestricted": {
+    "message": "受保护页面"
+  },
+  "valDash": {
+    "message": "-"
+  },
+  "btnStart": {
+    "message": "开始编辑"
+  },
+  "btnStop": {
+    "message": "停止编辑"
+  },
+  "btnReset": {
+    "message": "重置页面"
+  },
+  "btnUnavailable": {
+    "message": "此处不可用"
+  },
+  "tipShortcut": {
+    "message": "切换:Ctrl+Shift+H"
+  },
+  "tipShortcutMac": {
+    "message": "切换:⌘+Shift+H"
+  },
+  "helpTooltip": {
+    "message": "打开帮助"
+  },
+  "viewOnGitHub": {
+    "message": "在 GitHub 上查看"
+  },
+  "modalTitle": {
+    "message": "替换图片"
+  },
+  "modalUrlPlaceholder": {
+    "message": "图片 URL 或 data URI"
+  },
+  "modalOr": {
+    "message": "或"
+  },
+  "modalUpload": {
+    "message": "从本机上传"
+  },
+  "modalApply": {
+    "message": "应用"
+  },
+  "modalCancel": {
+    "message": "取消"
+  },
+  "welcomeKicker": {
+    "message": "安装完成"
+  },
+  "welcomeHeading": {
+    "message": "欢迎使用 HAKR"
+  },
+  "welcomeIntro": {
+    "message": "在本地编辑任何网页。点击文字可重写,点击图片可替换。无需开发者工具。"
+  },
+  "welcomeHowTitle": {
+    "message": "使用方法"
+  },
+  "welcomeStep1Title": {
+    "message": "打开 HAKR 弹窗"
+  },
+  "welcomeStep1Body": {
+    "message": "点击浏览器工具栏中的 HAKR 图标。"
+  },
+  "welcomeStep2Title": {
+    "message": "开始编辑"
+  },
+  "welcomeStep2Body": {
+    "message": "点击「开始编辑」即可在当前页面启用编辑模式。弹窗会自动关闭。"
+  },
+  "welcomeStep3Title": {
+    "message": "随意点击"
+  },
+  "welcomeStep3Body": {
+    "message": "点击任何文字即可就地重写。点击任何图片可用 URL 或本机文件替换它。"
+  },
+  "welcomeStep4Title": {
+    "message": "停止或重置"
+  },
+  "welcomeStep4Body": {
+    "message": "再次打开弹窗即可停止编辑,或者重置页面以撤销所有更改。"
+  },
+  "welcomeNotesTitle": {
+    "message": "重要提示"
+  },
+  "welcomeNoteLocal": {
+    "message": "所有更改都是本地的。只有您能看到 - 不会保存或发送到任何地方。"
+  },
+  "welcomeNoteEphemeral": {
+    "message": "重新加载页面即可恢复原始内容。"
+  },
+  "welcomeNoteRestricted": {
+    "message": "HAKR 无法在浏览器内部页面(chrome://、about: 等)或扩展商店上运行。"
+  },
+  "welcomeShortcutTitle": {
+    "message": "键盘快捷键"
+  },
+  "welcomeShortcutBody": {
+    "message": "在任何页面按 Ctrl+Shift+H(Mac 上为 ⌘+Shift+H)即可在不打开弹窗的情况下切换编辑模式。"
+  },
+  "welcomeCta": {
+    "message": "知道了"
+  }
+}

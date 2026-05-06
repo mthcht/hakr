@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HAKR</title>
+<style>
+  :root {
+    --green:       #00ff41;
+    --green-dim:   #00cc33;
+    --green-faint: rgba(0, 255, 65, 0.30);
+    --green-soft:  rgba(0, 255, 65, 0.6);
+    --red:         #ff4141;
+    --bg:          #050805;
+    --bg-deeper:   #020402;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 320px; }
+
+  body {
+    background: var(--bg);
+    color: var(--green);
+    font-family: 'Courier New', 'Consolas', 'Menlo', monospace;
+    font-size: 12px;
+    overflow: hidden;
+    border: 1px solid var(--green);
+    position: relative;
+  }
+
+  /* ───── header ───── */
+  .header {
+    background: linear-gradient(90deg, var(--green) 0%, var(--green-dim) 100%);
+    color: #000;
+    padding: 6px 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .title { display: flex; align-items: center; gap: 8px; }
+  .header .version { opacity: 0.55; font-size: 10px; font-weight: 400; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .icon-btn {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.65;
+    transition: opacity 0.15s;
+  }
+  .icon-btn:hover { opacity: 1; }
+  .icon-btn svg { display: block; }
+
+  /* ───── body ───── */
+  .body {
+    padding: 16px 16px 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* very subtle scanlines - not in-your-face */
+  .body::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg,
+        rgba(0,255,65,0.025) 0px,
+        rgba(0,255,65,0.025) 1px,
+        transparent 1px,
+        transparent 3px);
+    pointer-events: none;
+  }
+  .body > * { position: relative; }
+
+  /* ───── branding ───── */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .logo {
+    width: 44px; height: 44px;
+    flex-shrink: 0;
+    display: block;
+    animation: hexPulse 2.4s infinite ease-in-out;
+  }
+  @keyframes hexPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.75; }
+  }
+  .brand-text { display: flex; flex-direction: column; gap: 2px; }
+  .brand-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--green);
+    text-shadow: 0 0 6px rgba(0,255,65,0.35);
+    line-height: 1;
+  }
+  .brand-tag {
+    font-size: 10px;
+    color: var(--green);
+    opacity: 0.5;
+  }
+
+  /* ───── data panel ───── */
+  .panel {
+    border: 1px solid var(--green-faint);
+    background: var(--bg-deeper);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .panel-row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .panel-row .key {
+    opacity: 0.45;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+  }
+  .panel-row .val {
+    color: var(--green);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .panel-row .val.muted   { opacity: 0.5; font-weight: 400; }
+  .panel-row .val.offline { color: var(--red); }
+  .panel-row .val.warn    { color: var(--green); opacity: 0.55; }
+
+  /* status indicator dot */
+  .indicator {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: 1px;
+  }
+  .indicator.on {
+    background: var(--green);
+    box-shadow: 0 0 6px var(--green), 0 0 12px var(--green);
+    animation: pulseDot 1.6s infinite;
+  }
+  .indicator.off {
+    background: var(--red);
+    box-shadow: 0 0 4px rgba(255, 65, 65, 0.5);
+  }
+  .indicator.warn {
+    background: var(--green);
+    box-shadow: 0 0 4px rgba(0,255,65,0.4);
+    opacity: 0.4;
+  }
+  @keyframes pulseDot {
+    0%, 100% { transform: scale(1);   opacity: 1; }
+    50%      { transform: scale(0.7); opacity: 0.55; }
+  }
+
+  /* ───── buttons ───── */
+  button.action {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-family: inherit;
+    font-size: 12px;
+    padding: 10px 14px 10px 32px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: color .15s, background .15s, box-shadow .15s, border-color .15s;
+    margin-bottom: 7px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  button.action::before {
+    content: '▸';
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: all 0.18s;
+    font-size: 12px;
+  }
+  button.action:hover:not(:disabled) {
+    background: var(--green);
+    color: #000;
+    box-shadow: 0 0 12px rgba(0,255,65,0.4);
+  }
+  button.action:hover:not(:disabled)::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(2px);
+    color: #000;
+  }
+  button.action:active:not(:disabled) { transform: translateY(1px); }
+
+  button.action.danger {
+    border-color: var(--red);
+    color: var(--red);
+  }
+  button.action.danger:hover:not(:disabled) {
+    background: var(--red);
+    color: #000;
+    box-shadow: 0 0 12px rgba(255,65,65,0.4);
+  }
+  button.action.danger:hover:not(:disabled)::before { color: #000; }
+
+  button.action:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* ───── tip line ───── */
+  .tip {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--green-faint);
+    font-size: 10px;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">
+      <span>◉ HAKR</span>
+      <span class="version">v1.0</span>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" id="github-btn" type="button" data-i18n-attr="title:viewOnGitHub" title="View on GitHub" aria-label="GitHub">
+        <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="help-btn" type="button" data-i18n-attr="title:helpTooltip" title="Open help" aria-label="Help">?</button>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- branding -->
+    <div class="brand">
+      <img class="logo" src="logo.png" width="44" height="44" alt="HAKR" />
+      <div class="brand-text">
+        <div class="brand-name">HAKR</div>
+        <div class="brand-tag" data-i18n="tagline">Live page editor</div>
+      </div>
+    </div>
+
+    <!-- page panel -->
+    <div class="panel">
+      <div class="panel-row">
+        <span class="key" data-i18n="rowPage">PAGE</span>
+        <span class="val muted" id="target-host">-</span>
+      </div>
+      <div class="panel-row">
+        <span class="key" data-i18n="rowStatus">STATUS</span>
+        <span class="val offline" id="status-line">
+          <span class="indicator off" id="indicator"></span><span id="status-value">-</span>
+        </span>
+      </div>
+      <div class="panel-row">
+        <span class="key" data-i18n="rowEdits">EDITS</span>
+        <span class="val muted" id="edit-count">-</span>
+      </div>
+    </div>
+
+    <!-- actions -->
+    <button class="action" id="toggle" type="button" disabled data-i18n="btnStart">Start editing</button>
+    <button class="action danger" id="reset" type="button" disabled data-i18n="btnReset">Reset page</button>
+
+    <!-- tip -->
+    <div class="tip" id="tip" data-i18n="tipShortcut">Toggle: Ctrl+Shift+H</div>
+
+  </div>
+
+<script src="popup.js"></script>
+</body>
+</html>

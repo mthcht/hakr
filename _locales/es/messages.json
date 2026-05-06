@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "HAKR - Editor de páginas en vivo"
+  },
+  "extDesc": {
+    "message": "Haz clic en cualquier texto o imagen de una página web para editarlo localmente. Los cambios son locales y se restablecen al recargar."
+  },
+  "tagline": {
+    "message": "Editor de páginas en vivo"
+  },
+  "rowPage": {
+    "message": "PÁGINA"
+  },
+  "rowStatus": {
+    "message": "ESTADO"
+  },
+  "rowEdits": {
+    "message": "EDICIONES"
+  },
+  "statusActive": {
+    "message": "Activo"
+  },
+  "statusInactive": {
+    "message": "Inactivo"
+  },
+  "statusRestricted": {
+    "message": "Página restringida"
+  },
+  "valDash": {
+    "message": "-"
+  },
+  "btnStart": {
+    "message": "Empezar a editar"
+  },
+  "btnStop": {
+    "message": "Detener edición"
+  },
+  "btnReset": {
+    "message": "Restablecer página"
+  },
+  "btnUnavailable": {
+    "message": "No disponible aquí"
+  },
+  "tipShortcut": {
+    "message": "Alternar: Ctrl+Mayús+H"
+  },
+  "tipShortcutMac": {
+    "message": "Alternar: ⌘+Mayús+H"
+  },
+  "helpTooltip": {
+    "message": "Ayuda"
+  },
+  "viewOnGitHub": {
+    "message": "Ver en GitHub"
+  },
+  "modalTitle": {
+    "message": "Reemplazar imagen"
+  },
+  "modalUrlPlaceholder": {
+    "message": "URL de la imagen o data URI"
+  },
+  "modalOr": {
+    "message": "o"
+  },
+  "modalUpload": {
+    "message": "Subir desde tu equipo"
+  },
+  "modalApply": {
+    "message": "Aplicar"
+  },
+  "modalCancel": {
+    "message": "Cancelar"
+  },
+  "welcomeKicker": {
+    "message": "INSTALADO"
+  },
+  "welcomeHeading": {
+    "message": "Te damos la bienvenida a HAKR"
+  },
+  "welcomeIntro": {
+    "message": "Edita cualquier página web localmente. Haz clic en el texto para reescribirlo, haz clic en las imágenes para reemplazarlas. Sin herramientas de desarrollo."
+  },
+  "welcomeHowTitle": {
+    "message": "Cómo funciona"
+  },
+  "welcomeStep1Title": {
+    "message": "Abre la ventana de HAKR"
+  },
+  "welcomeStep1Body": {
+    "message": "Haz clic en el icono de HAKR en la barra de herramientas de tu navegador."
+  },
+  "welcomeStep2Title": {
+    "message": "Empieza a editar"
+  },
+  "welcomeStep2Body": {
+    "message": "Pulsa «Empezar a editar» para activar el modo edición en la página actual. La ventana se cierra automáticamente."
+  },
+  "welcomeStep3Title": {
+    "message": "Haz clic en lo que quieras"
+  },
+  "welcomeStep3Body": {
+    "message": "Haz clic en cualquier texto para reescribirlo. Haz clic en cualquier imagen para reemplazarla con una URL o un archivo de tu equipo."
+  },
+  "welcomeStep4Title": {
+    "message": "Detener o restablecer"
+  },
+  "welcomeStep4Body": {
+    "message": "Vuelve a abrir la ventana para detener la edición, o restablece la página para deshacer todos tus cambios."
+  },
+  "welcomeNotesTitle": {
+    "message": "Importante"
+  },
+  "welcomeNoteLocal": {
+    "message": "Todos los cambios son locales. Solo tú los ves - nada se guarda ni se envía a ningún sitio."
+  },
+  "welcomeNoteEphemeral": {
+    "message": "Recargar la página restaura el contenido original."
+  },
+  "welcomeNoteRestricted": {
+    "message": "HAKR no funciona en páginas internas del navegador (chrome://, about:, etc.) ni en las tiendas de extensiones."
+  },
+  "welcomeShortcutTitle": {
+    "message": "Atajo de teclado"
+  },
+  "welcomeShortcutBody": {
+    "message": "Pulsa Ctrl+Mayús+H (⌘+Mayús+H en Mac) en cualquier página para alternar el modo edición sin abrir la ventana."
+  },
+  "welcomeCta": {
+    "message": "Entendido"
+  }
+}

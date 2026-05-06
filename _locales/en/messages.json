@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "HAKR - Live Page Editor"
+  },
+  "extDesc": {
+    "message": "Click any text or image on a webpage to edit it locally. Changes are local only and reset on reload."
+  },
+  "tagline": {
+    "message": "Live page editor"
+  },
+  "rowPage": {
+    "message": "PAGE"
+  },
+  "rowStatus": {
+    "message": "STATUS"
+  },
+  "rowEdits": {
+    "message": "EDITS"
+  },
+  "statusActive": {
+    "message": "Active"
+  },
+  "statusInactive": {
+    "message": "Inactive"
+  },
+  "statusRestricted": {
+    "message": "Restricted page"
+  },
+  "valDash": {
+    "message": "-"
+  },
+  "btnStart": {
+    "message": "Start editing"
+  },
+  "btnStop": {
+    "message": "Stop editing"
+  },
+  "btnReset": {
+    "message": "Reset page"
+  },
+  "btnUnavailable": {
+    "message": "Not available here"
+  },
+  "tipShortcut": {
+    "message": "Toggle: Ctrl+Shift+H"
+  },
+  "tipShortcutMac": {
+    "message": "Toggle: ⌘+Shift+H"
+  },
+  "helpTooltip": {
+    "message": "Open help"
+  },
+  "viewOnGitHub": {
+    "message": "View on GitHub"
+  },
+  "modalTitle": {
+    "message": "Replace image"
+  },
+  "modalUrlPlaceholder": {
+    "message": "Image URL or data URI"
+  },
+  "modalOr": {
+    "message": "or"
+  },
+  "modalUpload": {
+    "message": "Upload from your computer"
+  },
+  "modalApply": {
+    "message": "Apply"
+  },
+  "modalCancel": {
+    "message": "Cancel"
+  },
+  "welcomeKicker": {
+    "message": "INSTALLED"
+  },
+  "welcomeHeading": {
+    "message": "Welcome to HAKR"
+  },
+  "welcomeIntro": {
+    "message": "Edit any webpage locally. Click text to rewrite it, click images to swap them. No developer tools required."
+  },
+  "welcomeHowTitle": {
+    "message": "How it works"
+  },
+  "welcomeStep1Title": {
+    "message": "Open the HAKR popup"
+  },
+  "welcomeStep1Body": {
+    "message": "Click the HAKR icon in your browser toolbar."
+  },
+  "welcomeStep2Title": {
+    "message": "Start editing"
+  },
+  "welcomeStep2Body": {
+    "message": "Press “Start editing” to enable edit mode on the current page. The popup closes automatically."
+  },
+  "welcomeStep3Title": {
+    "message": "Click anything"
+  },
+  "welcomeStep3Body": {
+    "message": "Click any text to rewrite it inline. Click any image to replace it with a URL or a file from your computer."
+  },
+  "welcomeStep4Title": {
+    "message": "Stop or reset"
+  },
+  "welcomeStep4Body": {
+    "message": "Open the popup again to stop editing, or reset the page to undo all your changes."
+  },
+  "welcomeNotesTitle": {
+    "message": "Good to know"
+  },
+  "welcomeNoteLocal": {
+    "message": "All changes are local. Only you see them - nothing is saved or sent anywhere."
+  },
+  "welcomeNoteEphemeral": {
+    "message": "Reloading the page restores the original content."
+  },
+  "welcomeNoteRestricted": {
+    "message": "HAKR cannot run on browser-internal pages (chrome://, about:, etc.) or extension stores."
+  },
+  "welcomeShortcutTitle": {
+    "message": "Keyboard shortcut"
+  },
+  "welcomeShortcutBody": {
+    "message": "Press Ctrl+Shift+H (⌘+Shift+H on Mac) on any page to toggle edit mode without opening the popup."
+  },
+  "welcomeCta": {
+    "message": "Got it"
+  }
+}

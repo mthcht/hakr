@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "HAKR - ライブページエディター"
+  },
+  "extDesc": {
+    "message": "ウェブページ上の任意のテキストや画像をクリックして、ローカルで編集できます。変更はローカルのみで、再読み込みすると元に戻ります。"
+  },
+  "tagline": {
+    "message": "ライブページエディター"
+  },
+  "rowPage": {
+    "message": "ページ"
+  },
+  "rowStatus": {
+    "message": "状態"
+  },
+  "rowEdits": {
+    "message": "編集数"
+  },
+  "statusActive": {
+    "message": "編集中"
+  },
+  "statusInactive": {
+    "message": "停止中"
+  },
+  "statusRestricted": {
+    "message": "保護されたページ"
+  },
+  "valDash": {
+    "message": "-"
+  },
+  "btnStart": {
+    "message": "編集を開始"
+  },
+  "btnStop": {
+    "message": "編集を停止"
+  },
+  "btnReset": {
+    "message": "ページをリセット"
+  },
+  "btnUnavailable": {
+    "message": "ここでは利用できません"
+  },
+  "tipShortcut": {
+    "message": "切り替え: Ctrl+Shift+H"
+  },
+  "tipShortcutMac": {
+    "message": "切り替え: ⌘+Shift+H"
+  },
+  "helpTooltip": {
+    "message": "ヘルプを開く"
+  },
+  "viewOnGitHub": {
+    "message": "GitHub で見る"
+  },
+  "modalTitle": {
+    "message": "画像を置き換える"
+  },
+  "modalUrlPlaceholder": {
+    "message": "画像のURLまたはデータURI"
+  },
+  "modalOr": {
+    "message": "または"
+  },
+  "modalUpload": {
+    "message": "コンピューターからアップロード"
+  },
+  "modalApply": {
+    "message": "適用"
+  },
+  "modalCancel": {
+    "message": "キャンセル"
+  },
+  "welcomeKicker": {
+    "message": "インストール完了"
+  },
+  "welcomeHeading": {
+    "message": "HAKR へようこそ"
+  },
+  "welcomeIntro": {
+    "message": "ウェブページをローカルで編集できます。テキストをクリックして書き換え、画像をクリックして差し替え。開発者ツールは不要です。"
+  },
+  "welcomeHowTitle": {
+    "message": "使い方"
+  },
+  "welcomeStep1Title": {
+    "message": "HAKR ポップアップを開く"
+  },
+  "welcomeStep1Body": {
+    "message": "ブラウザーのツールバーにある HAKR アイコンをクリックします。"
+  },
+  "welcomeStep2Title": {
+    "message": "編集を開始する"
+  },
+  "welcomeStep2Body": {
+    "message": "「編集を開始」を押すと、現在のページで編集モードが有効になります。ポップアップは自動的に閉じます。"
+  },
+  "welcomeStep3Title": {
+    "message": "好きな場所をクリック"
+  },
+  "welcomeStep3Body": {
+    "message": "テキストをクリックすればその場で書き換えられます。画像をクリックすると、URL またはコンピューターのファイルで置き換えられます。"
+  },
+  "welcomeStep4Title": {
+    "message": "停止またはリセット"
+  },
+  "welcomeStep4Body": {
+    "message": "もう一度ポップアップを開けば編集を停止できます。ページをリセットすると、すべての変更が取り消されます。"
+  },
+  "welcomeNotesTitle": {
+    "message": "ご注意"
+  },
+  "welcomeNoteLocal": {
+    "message": "すべての変更はローカルです。あなたにしか見えません - どこにも保存・送信されません。"
+  },
+  "welcomeNoteEphemeral": {
+    "message": "ページを再読み込みすると元の内容に戻ります。"
+  },
+  "welcomeNoteRestricted": {
+    "message": "HAKR はブラウザー内部のページ (chrome://、about: など) や拡張機能ストアでは動作しません。"
+  },
+  "welcomeShortcutTitle": {
+    "message": "キーボードショートカット"
+  },
+  "welcomeShortcutBody": {
+    "message": "任意のページで Ctrl+Shift+H (Mac は ⌘+Shift+H) を押すと、ポップアップを開かずに編集モードを切り替えられます。"
+  },
+  "welcomeCta": {
+    "message": "了解"
+  }
+}

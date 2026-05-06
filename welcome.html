@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title data-i18n="welcomeHeading">Welcome to HAKR</title>
+<style>
+  :root {
+    --green:       #00ff41;
+    --green-dim:   #00cc33;
+    --green-faint: rgba(0, 255, 65, 0.30);
+    --green-soft:  rgba(0, 255, 65, 0.6);
+    --green-mute:  rgba(0, 255, 65, 0.45);
+    --red:         #ff4141;
+    --bg:          #050805;
+    --bg-deeper:   #020402;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--green);
+    font-family: 'Courier New', 'Consolas', 'Menlo', monospace;
+    min-height: 100vh;
+  }
+
+  /* very subtle scanlines + dotted grid for atmospheric texture */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0,255,65,0.04) 1px, transparent 0),
+      repeating-linear-gradient(0deg,
+        rgba(0,255,65,0.02) 0px,
+        rgba(0,255,65,0.02) 1px,
+        transparent 1px,
+        transparent 4px);
+    background-size: 16px 16px, 100% 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 32px 80px;
+  }
+
+  /* ───── header ───── */
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--green-faint);
+  }
+  .top .logo {
+    width: 56px; height: 56px;
+    flex-shrink: 0;
+    display: block;
+    animation: hexPulse 2.4s infinite ease-in-out;
+  }
+  @keyframes hexPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.75; }
+  }
+  .top .brand-name {
+    font-size: 32px;
+    letter-spacing: 6px;
+    font-weight: 700;
+    color: var(--green);
+    text-shadow: 0 0 10px rgba(0,255,65,0.4);
+    line-height: 1;
+  }
+  .top .version {
+    font-size: 11px;
+    opacity: 0.5;
+    margin-top: 6px;
+    letter-spacing: 2px;
+  }
+  .top .kicker {
+    margin-left: auto;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--green);
+    opacity: 0.45;
+    border: 1px solid var(--green-faint);
+    padding: 4px 10px;
+  }
+
+  /* ───── hero ───── */
+  .hero { margin-bottom: 56px; }
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    color: var(--green);
+    line-height: 1.2;
+  }
+  .hero h1::before {
+    content: '> ';
+    opacity: 0.5;
+  }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--green);
+    opacity: 0.75;
+    max-width: 580px;
+  }
+
+  /* ───── section ───── */
+  section { margin-bottom: 56px; }
+  section h2 {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--green);
+    opacity: 0.6;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+  section h2::before { content: '── '; opacity: 0.5; }
+  section h2::after  { content: ' ──'; opacity: 0.5; }
+
+  /* ───── steps ───── */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 16px 18px;
+    border: 1px solid var(--green-faint);
+    background: var(--bg-deeper);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .step:hover {
+    border-color: var(--green-soft);
+    box-shadow: 0 0 16px rgba(0,255,65,0.15);
+  }
+  .step-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--green);
+    opacity: 0.7;
+    line-height: 1;
+    padding-top: 2px;
+    letter-spacing: 1px;
+  }
+  .step-body { display: flex; flex-direction: column; gap: 6px; }
+  .step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.5px;
+  }
+  .step-desc {
+    font-size: 13px;
+    color: var(--green);
+    opacity: 0.7;
+    line-height: 1.6;
+  }
+
+  /* ───── notes ───── */
+  .notes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .notes li {
+    padding-left: 22px;
+    position: relative;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--green);
+    opacity: 0.75;
+  }
+  .notes li::before {
+    content: '▸';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: var(--green);
+    opacity: 0.6;
+  }
+
+  /* ───── shortcut callout ───── */
+  .shortcut {
+    border: 1px solid var(--green-faint);
+    padding: 18px 20px;
+    background: var(--bg-deeper);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .shortcut-icon {
+    font-size: 18px;
+    width: 36px; height: 36px;
+    border: 1px solid var(--green-soft);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+  .shortcut-text {
+    flex: 1;
+    min-width: 240px;
+  }
+  .shortcut-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.55;
+    margin-bottom: 4px;
+  }
+  .shortcut-body {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--green);
+    opacity: 0.8;
+  }
+  kbd {
+    display: inline-block;
+    background: rgba(0, 255, 65, 0.1);
+    border: 1px solid var(--green-faint);
+    padding: 1px 6px;
+    font-family: inherit;
+    font-size: 12px;
+    color: var(--green);
+    margin: 0 1px;
+  }
+
+  /* ───── CTA ───── */
+  .cta-wrap {
+    margin-top: 48px;
+    text-align: center;
+  }
+  .cta {
+    background: transparent;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-family: inherit;
+    font-size: 14px;
+    padding: 14px 36px 14px 50px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.18s;
+    position: relative;
+    min-width: 220px;
+  }
+  .cta::before {
+    content: '▸';
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    transition: all 0.18s;
+  }
+  .cta:hover {
+    background: var(--green);
+    color: #000;
+    box-shadow: 0 0 24px rgba(0,255,65,0.4);
+  }
+  .cta:hover::before {
+    color: #000;
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px);
+  }
+  .cta:active { transform: translateY(1px); }
+
+  /* ───── responsive ───── */
+  @media (max-width: 600px) {
+    .wrap { padding: 32px 20px 56px; }
+    .top { flex-wrap: wrap; gap: 12px; }
+    .top .kicker { margin-left: 0; }
+    .top .brand-name { font-size: 26px; }
+    .hero h1 { font-size: 26px; }
+    .step { grid-template-columns: 36px 1fr; gap: 14px; padding: 14px; }
+    .step-num { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- top: brand + version + kicker -->
+  <div class="top">
+    <img class="logo" src="logo.png" width="56" height="56" alt="HAKR" />
+    <div>
+      <div class="brand-name">HAKR</div>
+      <div class="version">v1.0</div>
+    </div>
+    <div class="kicker" data-i18n="welcomeKicker">INSTALLED</div>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <h1 data-i18n="welcomeHeading">Welcome to HAKR</h1>
+    <p data-i18n="welcomeIntro">Edit any webpage locally. Click text to rewrite it, click images to swap them. No developer tools required.</p>
+  </div>
+
+  <!-- how it works -->
+  <section>
+    <h2 data-i18n="welcomeHowTitle">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="welcomeStep1Title">Open the HAKR popup</div>
+          <div class="step-desc" data-i18n="welcomeStep1Body">Click the HAKR icon in your browser toolbar.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="welcomeStep2Title">Start editing</div>
+          <div class="step-desc" data-i18n="welcomeStep2Body">Press “Start editing” to enable edit mode on the current page. The popup closes automatically.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="welcomeStep3Title">Click anything</div>
+          <div class="step-desc" data-i18n="welcomeStep3Body">Click any text to rewrite it inline. Click any image to replace it with a URL or a file from your computer.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <div class="step-title" data-i18n="welcomeStep4Title">Stop or reset</div>
+          <div class="step-desc" data-i18n="welcomeStep4Body">Open the popup again to stop editing, or reset the page to undo all your changes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- good to know -->
+  <section>
+    <h2 data-i18n="welcomeNotesTitle">Good to know</h2>
+    <ul class="notes">
+      <li data-i18n="welcomeNoteLocal">All changes are local. Only you see them - nothing is saved or sent anywhere.</li>
+      <li data-i18n="welcomeNoteEphemeral">Reloading the page restores the original content.</li>
+      <li data-i18n="welcomeNoteRestricted">HAKR cannot run on browser-internal pages (chrome://, about:, etc.) or extension stores.</li>
+    </ul>
+  </section>
+
+  <!-- shortcut -->
+  <section>
+    <div class="shortcut">
+      <div class="shortcut-icon">⌨</div>
+      <div class="shortcut-text">
+        <div class="shortcut-title" data-i18n="welcomeShortcutTitle">Keyboard shortcut</div>
+        <div class="shortcut-body" id="shortcut-body" data-i18n="welcomeShortcutBody">Press Ctrl+Shift+H (⌘+Shift+H on Mac) on any page to toggle edit mode without opening the popup.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  <div class="cta-wrap">
+    <button class="cta" id="cta" type="button" data-i18n="welcomeCta">Got it</button>
+  </div>
+
+</div>
+
+<script src="welcome.js"></script>
+</body>
+</html>

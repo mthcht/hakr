@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "HAKR - Live-Seiteneditor"
+  },
+  "extDesc": {
+    "message": "Klicke auf einen beliebigen Text oder ein Bild auf einer Webseite, um es lokal zu bearbeiten. Änderungen sind nur lokal und werden beim Neuladen zurückgesetzt."
+  },
+  "tagline": {
+    "message": "Live-Seiteneditor"
+  },
+  "rowPage": {
+    "message": "SEITE"
+  },
+  "rowStatus": {
+    "message": "STATUS"
+  },
+  "rowEdits": {
+    "message": "ÄNDERUNGEN"
+  },
+  "statusActive": {
+    "message": "Aktiv"
+  },
+  "statusInactive": {
+    "message": "Inaktiv"
+  },
+  "statusRestricted": {
+    "message": "Geschützte Seite"
+  },
+  "valDash": {
+    "message": "-"
+  },
+  "btnStart": {
+    "message": "Bearbeitung starten"
+  },
+  "btnStop": {
+    "message": "Bearbeitung beenden"
+  },
+  "btnReset": {
+    "message": "Seite zurücksetzen"
+  },
+  "btnUnavailable": {
+    "message": "Hier nicht verfügbar"
+  },
+  "tipShortcut": {
+    "message": "Umschalten: Strg+Umschalt+H"
+  },
+  "tipShortcutMac": {
+    "message": "Umschalten: ⌘+Umschalt+H"
+  },
+  "helpTooltip": {
+    "message": "Hilfe öffnen"
+  },
+  "viewOnGitHub": {
+    "message": "Auf GitHub ansehen"
+  },
+  "modalTitle": {
+    "message": "Bild ersetzen"
+  },
+  "modalUrlPlaceholder": {
+    "message": "Bild-URL oder Data-URI"
+  },
+  "modalOr": {
+    "message": "oder"
+  },
+  "modalUpload": {
+    "message": "Vom Computer hochladen"
+  },
+  "modalApply": {
+    "message": "Anwenden"
+  },
+  "modalCancel": {
+    "message": "Abbrechen"
+  },
+  "welcomeKicker": {
+    "message": "INSTALLIERT"
+  },
+  "welcomeHeading": {
+    "message": "Willkommen bei HAKR"
+  },
+  "welcomeIntro": {
+    "message": "Bearbeite jede Webseite lokal. Klicke auf Text, um ihn neu zu schreiben, klicke auf Bilder, um sie auszutauschen. Keine Entwicklertools nötig."
+  },
+  "welcomeHowTitle": {
+    "message": "So funktioniert es"
+  },
+  "welcomeStep1Title": {
+    "message": "HAKR-Fenster öffnen"
+  },
+  "welcomeStep1Body": {
+    "message": "Klicke auf das HAKR-Symbol in der Browser-Symbolleiste."
+  },
+  "welcomeStep2Title": {
+    "message": "Bearbeitung starten"
+  },
+  "welcomeStep2Body": {
+    "message": "Klicke auf „Bearbeitung starten“, um den Bearbeitungsmodus für die aktuelle Seite zu aktivieren. Das Fenster schließt sich automatisch."
+  },
+  "welcomeStep3Title": {
+    "message": "Klicke irgendwo"
+  },
+  "welcomeStep3Body": {
+    "message": "Klicke auf einen Text, um ihn direkt zu überschreiben. Klicke auf ein Bild, um es durch eine URL oder eine Datei vom Computer zu ersetzen."
+  },
+  "welcomeStep4Title": {
+    "message": "Beenden oder zurücksetzen"
+  },
+  "welcomeStep4Body": {
+    "message": "Öffne das Fenster erneut, um die Bearbeitung zu beenden, oder setze die Seite zurück, um alle Änderungen rückgängig zu machen."
+  },
+  "welcomeNotesTitle": {
+    "message": "Wichtig zu wissen"
+  },
+  "welcomeNoteLocal": {
+    "message": "Alle Änderungen sind lokal. Nur du siehst sie - nichts wird gespeichert oder irgendwohin gesendet."
+  },
+  "welcomeNoteEphemeral": {
+    "message": "Beim Neuladen der Seite wird der ursprüngliche Inhalt wiederhergestellt."
+  },
+  "welcomeNoteRestricted": {
+    "message": "HAKR funktioniert nicht auf browserinternen Seiten (chrome://, about:, usw.) oder in Erweiterungsshops."
+  },
+  "welcomeShortcutTitle": {
+    "message": "Tastenkombination"
+  },
+  "welcomeShortcutBody": {
+    "message": "Drücke Strg+Umschalt+H (⌘+Umschalt+H auf dem Mac) auf einer beliebigen Seite, um den Bearbeitungsmodus ohne Öffnen des Fensters umzuschalten."
+  },
+  "welcomeCta": {
+    "message": "Verstanden"
+  }
+}
