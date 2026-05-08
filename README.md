@@ -9,7 +9,7 @@ All changes are **local-only** - only you see them, nothing is saved or sent any
 
 https://chromewebstore.google.com/detail/hakr-%E2%80%94-live-page-editor/hbaoklfnekfckialgdndflbpfkkpfilo
 
-## Install manually (Chrome / Edge / Brave / Opera / Arc - anything Chromium)
+## Or Install manually (Chrome / Edge / Brave / Opera / Arc - anything Chromium)
 
 1. Unzip `hakr-extension.zip` somewhere on your disk.
 2. Open `chrome://extensions` (or `edge://extensions`, `brave://extensions`, etc.)
